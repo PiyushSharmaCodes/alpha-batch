@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ReverseNumber{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number to which you want to print number");
+        System.out.println("Enter the number to which you want to Reverse");
         int n= sc.nextInt();
         int givennumber=n;
         int reverse=0;
@@ -11,6 +11,6 @@ public class ReverseNumber{
             reverse=reverse*10+(n%10);
         n/=10;      
       }
-      System.out.println("The reverse of "+ givennumber +" is "+reverse);
+      System.out.println("The Reverse of "+ givennumber +" is "+reverse);
     }
 }
