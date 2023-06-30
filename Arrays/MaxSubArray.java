@@ -35,7 +35,7 @@ public class MaxSubArray {
         }
         return maxsum;
     }
-    private static int MaxSubOpt2(int array[]) {
+    private static int MaxSubOpt2(int array[]) {//PrefixSum Array
         int prefixsum[]= new int[array.length];
         int maxsum=Integer.MIN_VALUE;
         prefixsum[0]=array[0];
@@ -55,6 +55,20 @@ public class MaxSubArray {
         }
         return maxsum;
     }
+    private static int MaxSubBest(int array[]) {//Kadane's Algorithm
+    int maxsum=Integer.MIN_VALUE;
+    int currsum=0;
+    for (int i = 0; i < array.length; i++) {
+        currsum+=array[i];
+        if (currsum<0) {
+            currsum=0;
+        }
+        else if (maxsum<currsum) {
+            maxsum=currsum;
+        }
+    }
+       return maxsum; 
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the Number of Element in the Array");
@@ -67,6 +81,7 @@ public class MaxSubArray {
         System.out.println("Max sum Present in given array is: "+MaxSubBrute(array));
         System.out.println("Max sum Present in given array is: "+MaxSubOpt1(array));
         System.out.println("Max sum Present in given array is: "+MaxSubOpt2(array));
+        System.out.println("Max sum Present in given array is: "+MaxSubBest(array));
         
         sc.close();
     }
