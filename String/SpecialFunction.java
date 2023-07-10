@@ -7,6 +7,9 @@ public class SpecialFunction {
         System.out.println("Enter your name");
         name=sc.nextLine();
         System.out.println("YOur name is "+name +" and It have "+name.length()+" characters");
+
+        // charAtr Method 
+        System.out.println("First character of your name is :"+name.charAt(0));
         sc.close();
     }
 }
