@@ -10,6 +10,12 @@ public class SpecialFunction {
 
         // charAtr Method 
         System.out.println("First character of your name is :"+name.charAt(0));
+
+        String lastname;
+        System.out.println("Enter your lastname: ");
+        lastname=sc.nextLine();
+        name=name.concat(" "+lastname);
+        System.out.println("your Full Name is : "+name);
         sc.close();
     }
 }
