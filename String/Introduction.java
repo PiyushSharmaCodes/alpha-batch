@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Introduction {
     public static void main(String[] args) {
@@ -20,6 +21,17 @@ public class Introduction {
         list[6]='k';
         System.out.println("After Mutation of Character array: ");
         System.out.println(list);
+
+        //Input and Output
+        String name;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a your name :");
+        name=sc.next();
+        sc.nextLine();//This is added to clear the buffer because it is not taking the next input
+        System.out.println("Your Entered name is :"+ name);
+        System.out.println("What is your Hobby?");
+        String hobby=sc.nextLine();
+        System.out.println("Your Hobby is :"+hobby);
 
     }
     
