@@ -13,6 +13,8 @@ public static void main(String[] args) {
     System.out.println("Paasword of "+A1.username+" is "+A1.getPassword());
     System.out.println("Do you want to exit from the Account Creation: press 0");
     int response=sc.nextInt();
+    Saving s1 = new Saving();
+    s1.Display();
     
     if (response==0) {
         break;
