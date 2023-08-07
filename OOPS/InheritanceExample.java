@@ -1,5 +1,8 @@
-package Animals;
+
 import java.util.Scanner;
+
+import Animals.Animal;
+import Animals.Dog;
 public class InheritanceExample {
     public static void main(String[] args) {
         Animal animal = new Animal();
